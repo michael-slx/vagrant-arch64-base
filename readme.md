@@ -11,6 +11,7 @@
 - [System configuration](#system-configuration)
 - [Security](#security)
 - [Contributions](#contributions)
+- [Change log](#change-log)
 - [Legal](#legal)
 
 <!-- /TOC -->
@@ -130,6 +131,10 @@ Please foresee from submitting issues in the following cases:
 - Changing a fundamental design decision such as choice of packages, partitioning, boot loader, initrd, etc. unless the current solution is broken, outdated or very slow.
 
 _- Thank you_
+
+## Change log
+
+- `20200315`: Initial release
 
 ## Legal
 
