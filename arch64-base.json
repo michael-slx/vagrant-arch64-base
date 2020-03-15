@@ -1,0 +1,52 @@
+{
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "name": "arch64-base",
+      "format": "ovf",
+      "guest_os_type": "ArchLinux_64",
+      "iso_interface": "sata",
+      "iso_url": "archlinux-2020.03.07-x86_64.iso",
+      "iso_checksum_type": "sha256",
+      "iso_checksum": "9AC42C2B525721420AADE44CE7EADBB341A3A96A79D1B995DBA5BDAEECA980D0",
+      "ssh_username": "root",
+      "ssh_private_key_file": "vagrant.pem",
+      "headless": true,
+      "shutdown_command": "echo 'packer' | sudo -S shutdown -P now",
+      "disk_size": 65536,
+      "hard_drive_interface": "sata",
+      "hard_drive_nonrotational": true,
+      "hard_drive_discard": true,
+      "guest_additions_mode": "disable",
+      "vboxmanage": [
+        [ "modifyvm", "{{.Name}}", "--firmware", "EFI" ],
+        [ "modifyvm", "{{.Name}}", "--memory", "1024" ],
+        [ "modifyvm", "{{.Name}}", "--boot1", "dvd" ],
+        [ "modifyvm", "{{.Name}}", "--boot2", "disk" ],
+        [ "modifyvm", "{{.Name}}", "--boot3", "none" ],
+        [ "modifyvm", "{{.Name}}", "--boot4", "none" ]
+      ]
+    }
+  ],
+
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "system_files",
+      "destination": "/tmp"
+    },
+    {
+      "type": "shell",
+      "script": "install-arch.sh"
+    }
+  ],
+
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "keep_input_artifact": false,
+      "compression_level": 9,
+      "output": "dist\\{{.BuildName}}_{{isotime \"20060102-150405\"}}_{{.Provider}}.box"
+    }
+  ]
+}
