@@ -133,6 +133,9 @@ _- Thank you_
 ## Change log
 
 - `20200315`: Initial release
+- `20200316`:
+  - Switched to using the official installation ISO disk image. This is supported using a boot command to enable SSH.
+  - This is the first version that can be built from this repo. Earlier commits in this project don't contain the required customized ISO image.
 
 ## Legal
 
