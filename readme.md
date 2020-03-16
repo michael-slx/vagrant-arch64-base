@@ -57,8 +57,6 @@ The final file will be placed in the `dist/` directory.
 - VirtualBox guest utilities: `virtualbox-guest-utils-nox`, `virtualbox-guest-modules-arch`
 - Processor microcode updates: `amd-ucode`, `intel-ucode`
 
-The `archlinux-2020.03.07-x86_64.iso`  ISO disk images is basically the default Arch Linux installation medium enhanced with a SSH server. However, it isn't redistributed with output Vagrant boxes.
-
 ## Partitioning
 
 The system's virtual hard disk is partitioned as follows (using GPT):
