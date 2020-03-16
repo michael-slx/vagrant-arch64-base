@@ -57,8 +57,6 @@ The final file will be placed in the `dist/` directory.
 - VirtualBox guest utilities: `virtualbox-guest-utils-nox`, `virtualbox-guest-modules-arch`
 - Processor microcode updates: `amd-ucode`, `intel-ucode`
 
-The `archlinux-2020.03.07-x86_64.iso`  ISO disk images is basically the default Arch Linux installation medium enhanced with a SSH server. However, it isn't redistributed with output Vagrant boxes.
-
 ## Partitioning
 
 The system's virtual hard disk is partitioned as follows (using GPT):
@@ -155,7 +153,5 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-
-Please note that the base installation ISO disk image (`archlinux-2020.03.07-x86_64.iso`) is exempt from this license since it contains third-party FLOSS packages. All relevant licenses are available in the live system. If you think that license terms for any distributed packages haven't been fulfilled, feel free to open an issue ticket.
 
 This project is **not** an official project of the Arch Linux distribution. The Arch Linux name and logo are recognized trademarks. Some rights reserved.
