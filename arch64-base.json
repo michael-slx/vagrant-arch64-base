@@ -6,9 +6,9 @@
       "format": "ovf",
       "guest_os_type": "ArchLinux_64",
       "iso_interface": "sata",
-      "iso_url": "archlinux-2020.03.07-x86_64.iso",
-      "iso_checksum_type": "sha256",
-      "iso_checksum": "9AC42C2B525721420AADE44CE7EADBB341A3A96A79D1B995DBA5BDAEECA980D0",
+      "iso_url": "https://archive.archlinux.org/iso/2020.03.01/archlinux-2020.03.01-x86_64.iso",
+      "iso_checksum_type": "sha1",
+      "iso_checksum": "69f18631dd1518e1efa596497399d668e6fc63e6",
       "ssh_username": "root",
       "ssh_private_key_file": "vagrant.pem",
       "headless": true,
@@ -19,12 +19,26 @@
       "hard_drive_discard": true,
       "guest_additions_mode": "disable",
       "vboxmanage": [
+        [ "modifyvm", "{{.Name}}", "--cpuhotplug", "on" ],
+        [ "modifyvm", "{{.Name}}", "--cpus", "8" ],
+        [ "modifyvm", "{{.Name}}", "--memory", "8192" ],
         [ "modifyvm", "{{.Name}}", "--firmware", "EFI" ],
-        [ "modifyvm", "{{.Name}}", "--memory", "1024" ],
         [ "modifyvm", "{{.Name}}", "--boot1", "dvd" ],
         [ "modifyvm", "{{.Name}}", "--boot2", "disk" ],
         [ "modifyvm", "{{.Name}}", "--boot3", "none" ],
         [ "modifyvm", "{{.Name}}", "--boot4", "none" ]
+      ],
+      "boot_wait": "1m",
+      "boot_keygroup_interval": "1s",
+      "boot_command": [
+        "sed -i '/^#PermitEmptyPasswords/ s/^#//' /etc/ssh/sshd_config<enter>",
+        "sed -i '/^PermitEmptyPasswords/ s/no/yes/' /etc/ssh/sshd_config<enter>",
+        "systemctl enable --now sshd<enter>",
+        "systemctl enable --now dhcpcd<enter>"
+      ],
+      "vboxmanage_post": [
+        [ "modifyvm", "{{.Name}}", "--cpus", "1" ],
+        [ "modifyvm", "{{.Name}}", "--memory", "1024" ]
       ]
     }
   ],
