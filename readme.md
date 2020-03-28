@@ -55,6 +55,7 @@ The final file will be placed in the `dist/` directory.
 - `systemd-resolvconf` (compatibility layer for `systemd-resolved` DNS resolver)
 - `reflector` (sorts pacman's mirror list)
 - VirtualBox guest utilities: `virtualbox-guest-utils-nox`, `virtualbox-guest-modules-arch`
+- `irqbalance` for load balancing hardware interrupts
 - Processor microcode updates: `amd-ucode`, `intel-ucode`
 
 ## Partitioning
@@ -87,6 +88,8 @@ The following additional configuration is applied by default:
   - Automatic updating using pacman hook.
 - Silent booting using kernel command line options
 - Hardware and processor entropy generation is trusted using kernel command line options
+- CPU exploit mitigations are disabled
+- Watchdogs are disabled
 - KMS and DRM disabled
 - reflector sorts pacman mirror list by download speed. Only HTTP(S) mirrors are used. reflector can either be run manually using the `auto-reflector` command, and is executed automatically on mirror list update (pacman hook) and a weekly timer.
 - Fancy output for pacman
@@ -110,6 +113,7 @@ As stated above this Vagrant comes with some inherent security risks, making it 
 
 The following is a non-exhaustive list of security loopholes. The above warning however still applies, use a real production environment instead.
 
+- CPU exploit mitigations disabled
 - Trusting of hardware RNGs
 - Insecure SSH configuration
 - Insecure user/password setup, sudo
