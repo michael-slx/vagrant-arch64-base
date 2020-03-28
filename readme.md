@@ -140,6 +140,11 @@ _- Thank you_
 - `20200316`:
   - Switched to using the official installation ISO disk image. This is supported using a boot command to enable SSH.
   - This is the first version that can be built from this repo. Earlier commits in this project don't contain the required customized ISO image.
+- `20200328`:
+  - Added `irqbalance`
+  - Disabled CPU exploit mitigations
+  - Disabled kernel watchdogs
+  - Split apart and refactored scripts
 
 ## Legal
 
