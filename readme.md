@@ -54,7 +54,7 @@ The final file will be placed in the `dist/` directory.
 - SSH server: `openssh`
 - `systemd-resolvconf` (compatibility layer for `systemd-resolved` DNS resolver)
 - `reflector` (sorts pacman's mirror list)
-- VirtualBox guest utilities: `virtualbox-guest-utils-nox`, `virtualbox-guest-modules-arch`
+- VirtualBox guest utilities (`virtualbox-guest-utils-nox`)
 - `irqbalance` for load balancing hardware interrupts
 - Processor microcode updates: `amd-ucode`, `intel-ucode`
 
@@ -145,6 +145,8 @@ _- Thank you_
   - Disabled CPU exploit mitigations
   - Disabled kernel watchdogs
   - Split apart and refactored scripts
+- `20200529`:
+  - Removed obsolete `virtualbox-guest-modules-arch` package
 
 ## Legal
 
