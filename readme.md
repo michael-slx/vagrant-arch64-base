@@ -147,6 +147,9 @@ _- Thank you_
   - Split apart and refactored scripts
 - `20200529`:
   - Removed obsolete `virtualbox-guest-modules-arch` package
+- `20200708`:
+  - Fix `iso_checksum` syntax error
+  - Update Arch ISO disk to `2020.07.01`
 
 ## Legal
 
