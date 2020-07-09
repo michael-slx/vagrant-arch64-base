@@ -150,6 +150,8 @@ _- Thank you_
 - `20200708`:
   - Fix `iso_checksum` syntax error
   - Update Arch ISO disk to `2020.07.01`
+- `20200709`:
+  - Fix issues regarding multi-core CPUs
 
 ## Legal
 
