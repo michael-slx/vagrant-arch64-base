@@ -152,6 +152,8 @@ _- Thank you_
   - Update Arch ISO disk to `2020.07.01`
 - `20200709`:
   - Fix issues regarding multi-core CPUs
+- `20200807`:
+  - Update Arch ISO disk to `2020.08.01`
 
 ## Legal
 
