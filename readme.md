@@ -154,6 +154,8 @@ _- Thank you_
   - Fix issues regarding multi-core CPUs
 - `20200807`:
   - Update Arch ISO disk to `2020.08.01`
+- `20200821`:
+  - Update to work with new reflector version
 
 ## Legal
 
