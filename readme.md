@@ -91,7 +91,7 @@ The following additional configuration is applied by default:
 - CPU exploit mitigations are disabled
 - Watchdogs are disabled
 - KMS and DRM disabled
-- reflector sorts pacman mirror list by download speed. Only HTTP(S) mirrors are used. reflector can either be run manually using the `auto-reflector` command, and is executed automatically on mirror list update (pacman hook) and a weekly timer.
+- reflector sorts pacman mirror list by download speed. Only HTTPS mirrors are used. reflector is executed automatically on mirror list update (pacman hook) and a weekly timer.
 - Fancy output for pacman
 - `evening` color scheme for vim
 - less as default pager, vim as editor (`EDITOR`, `VISUAL`)
