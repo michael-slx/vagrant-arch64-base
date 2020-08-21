@@ -9,14 +9,8 @@ fi
 UPLOAD_FILES="$1"
 
 echo 'Setting up reflector'
-cp -R $UPLOAD_FILES/auto-reflector /usr/share/
-chmod 555 /usr/share/auto-reflector
-chmod 440 /usr/share/auto-reflector/*
-chmod 555 /usr/share/auto-reflector/auto-reflector.sh
-ln -sf /usr/share/auto-reflector/mirrorupgrade.hook /etc/pacman.d/hooks/50-mirrorupgrade.hook
-ln -sf /usr/share/auto-reflector/reflector.service /usr/lib/systemd/system/reflector.service
-ln -sf /usr/share/auto-reflector/reflector.timer /usr/lib/systemd/system/reflector.timer
-ln -sf /usr/share/auto-reflector/auto-reflector.sh /usr/sbin/auto-reflector
+cp $UPLOAD_FILES/auto-reflector/reflector.conf /etc/xdg/reflector/reflector.conf
+cp $UPLOAD_FILES/auto-reflector/mirrorupgrade.hook /etc/pacman.d/hooks/50-mirrorupgrade.hook
 systemctl enable reflector.timer
-auto-reflector
+/usr/bin/reflector @/etc/xdg/reflector/reflector.conf
 pacman -Syyuu --noconfirm

@@ -7,4 +7,4 @@ Target = pacman-mirrorlist
 Description = Updating pacman-mirrorlist with reflector and removing pacnew...
 When = PostTransaction
 Depends = reflector
-Exec = /bin/sh -c "auto-reflector; rm -f /etc/pacman.d/mirrorlist.pacnew"
+Exec = /bin/sh -c "/usr/bin/reflector @/etc/xdg/reflector/reflector.conf; rm -f /etc/pacman.d/mirrorlist.pacnew"

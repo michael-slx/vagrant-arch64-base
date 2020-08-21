@@ -1,3 +1,4 @@
 output-*
 dist
 packer_cache
+auth.ps1
