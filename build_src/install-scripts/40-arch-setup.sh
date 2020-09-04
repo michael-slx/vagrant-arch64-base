@@ -6,7 +6,7 @@ echo "Installing packages"
 SYSTEM="base linux e2fsprogs dosfstools systemd-resolvconf openssh reflector"
 GUEST_UTILS="virtualbox-guest-utils-nox"
 UCODE="amd-ucode intel-ucode"
-UTILS="vim wget curl man sudo"
+UTILS="vim wget curl sudo"
 SHELL="zsh grml-zsh-config"
 PACKAGES="$SYSTEM $GUEST_UTILS $UCODE $UTILS $SHELL"
 pacstrap /mnt $PACKAGES
