@@ -27,7 +27,8 @@ If you haven't previously used **Vagrant**, please consult [**Vagrant's introduc
 To quickly **get started** with this box, type:
 
 ```shell
-$ vagrant init xcuipir/arch64-base
+$ vagrant init michael-slx/arch64-base
+$ vagrant up
 ```
 
 *Happy customizing! ;-}*
@@ -48,14 +49,13 @@ The final file will be placed in the `dist/` directory.
 
 - [`base` package set](https://www.archlinux.org/packages/core/any/base/)
 - `linux` _(of course - what did you expect?)_
-- User utilities: `vim`, `wget`, `curl`, `man`, `sudo`
+- User utilities: `vim`, `wget`, `curl`, `sudo`
 - Shell: `zsh`, `grml-zsh-config`
 - File systems: `e2fsprogs` and `dosfstools`
 - SSH server: `openssh`
 - `systemd-resolvconf` (compatibility layer for `systemd-resolved` DNS resolver)
 - `reflector` (sorts pacman's mirror list)
 - VirtualBox guest utilities (`virtualbox-guest-utils-nox`)
-- `irqbalance` for load balancing hardware interrupts
 - Processor microcode updates: `amd-ucode`, `intel-ucode`
 
 ## Partitioning
@@ -156,6 +156,11 @@ _- Thank you_
   - Update Arch ISO disk to `2020.08.01`
 - `20200821`:
   - Update to work with new reflector version
+- `20200904`:
+  - Update Arch ISO disk to `2020.09.01`
+  - Update and clean up config files
+  - Remove `irqbalance`: When a VM does not use host resources directly, `irqbalance` isn't needed for VMs.
+  - Remove `man`
 
 ## Legal
 
