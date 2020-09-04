@@ -16,17 +16,13 @@ Defaults      editor=/usr/bin/vim, !env_editor
 Defaults targetpw
 
 
-
 ## POLICY DEFINITIONS
 
 root ALL=(ALL) ALL
-
 %wheel ALL=(ALL) ALL
-
 vagrant ALL=(ALL) NOPASSWD: ALL
 
 
-
 ## Import extra configuration
+# DO NOT remove leading '#'! This isn't a comment.
 #includedir /etc/sudoers.d
-
