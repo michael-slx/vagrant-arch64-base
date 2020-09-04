@@ -5,9 +5,6 @@ set -euo pipefail
 echo 'Starting VM guest modules'
 systemctl enable vboxservice.service
 
-echo 'Starting irqbalance service'
-systemctl enable irqbalance.service
-
 echo 'Masking unneeded services'
 systemctl mask modprobe@drm
 systemctl mask systemd-remount-fs.service

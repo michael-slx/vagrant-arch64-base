@@ -3,7 +3,7 @@
 set -euo pipefail
 
 echo "Installing packages"
-SYSTEM="base linux e2fsprogs dosfstools systemd-resolvconf openssh reflector irqbalance"
+SYSTEM="base linux e2fsprogs dosfstools systemd-resolvconf openssh reflector"
 GUEST_UTILS="virtualbox-guest-utils-nox"
 UCODE="amd-ucode intel-ucode"
 UTILS="vim wget curl man sudo"
