@@ -9,8 +9,5 @@ fi
 UPLOAD_FILES="$1"
 
 echo 'Setting up reflector'
-cp $UPLOAD_FILES/auto-reflector/reflector.conf /etc/xdg/reflector/reflector.conf
-cp $UPLOAD_FILES/auto-reflector/mirrorupgrade.hook /etc/pacman.d/hooks/50-mirrorupgrade.hook
+cp $UPLOAD_FILES/reflector/reflector.conf /etc/xdg/reflector/reflector.conf
 systemctl enable reflector.timer
-/usr/bin/reflector @/etc/xdg/reflector/reflector.conf
-pacman -Syyuu --noconfirm

@@ -11,7 +11,6 @@ UPLOAD_FILES="$1"
 echo 'Installing boot loader'
 bootctl --path=/boot install
 
-cp -fR $UPLOAD_FILES/pacman-hooks/systemd-boot.hook /etc/pacman.d/hooks/100-systemd-boot.hook
 cp -R $UPLOAD_FILES/loader/** /boot/loader
 
 ROOT_FS_UUID="$(blkid -s UUID -o value /dev/sda2)"
