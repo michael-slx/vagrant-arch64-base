@@ -37,10 +37,10 @@
         [ "modifyvm", "{{.Name}}", "--boot3", "none" ],
         [ "modifyvm", "{{.Name}}", "--boot4", "none" ]
       ],
-      "boot_wait": "45s",
+      "boot_wait": "60s",
       "boot_keygroup_interval": "1s",
       "boot_command": [
-          "export HTTPHOST=http://{{.HTTPIP}}:{{.HTTPPort}}<enter>",
+          "export HTTPHOST=\"http://{{.HTTPIP}}:{{.HTTPPort}}\"<enter>",
           "export SCRIPT=00-bootstrap-ssh.sh<enter>",
           "curl -O $HTTPHOST/$SCRIPT<enter>",
           "bash $SCRIPT<enter>"
