@@ -161,6 +161,10 @@ _- Thank you_
   - Update and clean up config files
   - Remove `irqbalance`: When a VM does not use host resources directly, `irqbalance` isn't needed for VMs.
   - Remove `man`
+- `20201003`:
+  - Update Arch ISO disk to `2020.10.01`
+  - Extend boot timeout to 1 minute. (Boot commands were typed too early.)
+  - Boot command with HTTP server URL didn't work anymore due to `zsh` treating the colon differently now.
 
 ## Legal
 
