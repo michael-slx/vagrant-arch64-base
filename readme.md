@@ -165,6 +165,10 @@ _- Thank you_
   - Update Arch ISO disk to `2020.10.01`
   - Extend boot timeout to 1 minute. (Boot commands were typed too early.)
   - Boot command with HTTP server URL didn't work anymore due to `zsh` treating the colon differently now.
+- `20201101`:
+  - Update Arch ISO disk to `2020.11.01`
+  - Switch to `mirror.rackspace.com` for ISO download. Official Arch archive only contains new ISOs after a few days.
+  - Extend boot timeout to 2 minutes. (Boot commands were typed too early.)
 
 ## Legal
 
