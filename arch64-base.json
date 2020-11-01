@@ -8,7 +8,7 @@
       "iso_interface": "sata",
       "iso_url": "https://mirror.rackspace.com/archlinux/iso/2020.11.01/archlinux-2020.11.01-x86_64.iso",
       "iso_checksum": "sha1:739fab8d23430a01629a131ae02713a09af86968",
-      "ssh_wait_timeout": "2m",
+      "ssh_wait_timeout": "30s",
       "ssh_username": "root",
       "ssh_password": "",
       "http_directory": "build_src",
@@ -37,7 +37,7 @@
         [ "modifyvm", "{{.Name}}", "--boot3", "none" ],
         [ "modifyvm", "{{.Name}}", "--boot4", "none" ]
       ],
-      "boot_wait": "60s",
+      "boot_wait": "2m",
       "boot_keygroup_interval": "1s",
       "boot_command": [
           "export HTTPHOST=\"http://{{.HTTPIP}}:{{.HTTPPort}}\"<enter>",
