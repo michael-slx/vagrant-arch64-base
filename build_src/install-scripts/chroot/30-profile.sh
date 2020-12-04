@@ -10,3 +10,4 @@ UPLOAD_FILES="$1"
 
 echo 'Configuring profile defaults'
 cp $UPLOAD_FILES/profile/defaults.sh /etc/profile.d/defaults.sh
+cp $UPLOAD_FILES/profile/xdg.sh /etc/profile.d/xdg.sh
