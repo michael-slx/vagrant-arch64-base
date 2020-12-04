@@ -49,7 +49,7 @@ The final file will be placed in the `dist/` directory.
 
 - [`base` package set](https://www.archlinux.org/packages/core/any/base/)
 - `linux` _(of course - what did you expect?)_
-- User utilities: `vim`, `wget`, `curl`, `sudo`
+- User utilities: `neovim`, `wget`, `curl`, `sudo`, `man`, `info`
 - Shell: `zsh`, `grml-zsh-config`
 - File systems: `e2fsprogs` and `dosfstools`
 - SSH server: `openssh`
@@ -93,8 +93,7 @@ The following additional configuration is applied by default:
 - KMS and DRM disabled
 - reflector sorts pacman mirror list by download speed. Only HTTPS mirrors are used. reflector is executed automatically on mirror list update (pacman hook) and a weekly timer.
 - Fancy output for pacman
-- `evening` color scheme for vim
-- less as default pager, vim as editor (`EDITOR`, `VISUAL`)
+- less as default pager, neovim as editor (`EDITOR`, `VISUAL`)
 - User setup:
   - `vagrant ` user
   - `vagrant` as a password for the root and vagrant users
@@ -169,6 +168,15 @@ _- Thank you_
   - Update Arch ISO disk to `2020.11.01`
   - Switch to `mirror.rackspace.com` for ISO download. Official Arch archive only contains new ISOs after a few days.
   - Extend boot timeout to 2 minutes. (Boot commands were typed too early.)
+- `20201204`:
+  - Update Arch ISO disk to `2020.12.01`
+  - Switch to neovim
+    Use `nvim` instead of `vim` to edit files
+  - Include `man` & `info`
+  - Let zsh source global `/etc/profile`
+  - Let reflector pick 50 mirrors instead of 25
+  - Globally set XDG base directory variables
+  - Disable 3D acceleration (Not needed for a CLI box)
 
 ## Legal
 
