@@ -10,7 +10,7 @@
 # Reset environment by default
 Defaults      env_reset
 # Set default EDITOR to vim, and do not allow visudo to use EDITOR/VISUAL.
-Defaults      editor=/usr/bin/vim, !env_editor
+Defaults      editor=/usr/bin/nvim, !env_editor
 
 # Require the target (i.e. root) password
 Defaults targetpw
