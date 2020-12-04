@@ -28,7 +28,6 @@
         [ "modifyvm", "{{.Name}}", "--hpet", "on" ],
         [ "modifyvm", "{{.Name}}", "--rtcuseutc", "on" ],
         [ "modifyvm", "{{.Name}}", "--graphicscontroller", "vmsvga" ],
-        [ "modifyvm", "{{.Name}}", "--accelerate3d", "on" ],
         [ "modifyvm", "{{.Name}}", "--biosbootmenu", "disabled" ],
         [ "modifyvm", "{{.Name}}", "--memory", "8192" ],
         [ "modifyvm", "{{.Name}}", "--cpus", "8" ],
