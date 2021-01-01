@@ -186,7 +186,7 @@ _- Thank you_
 This project's configuration files and installation scripts are licensed under the [**Apache License, Version 2**](http://www.apache.org/licenses/LICENSE-2.0).
 
 ```
-Copyright 2020 Michael Schantl
+Copyright 2020-2021 Michael Schantl
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
