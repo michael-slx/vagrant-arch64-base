@@ -177,6 +177,9 @@ _- Thank you_
   - Let reflector pick 50 mirrors instead of 25
   - Globally set XDG base directory variables
   - Disable 3D acceleration (Not needed for a CLI box)
+- `20210101`:
+  - Update Arch ISO disk to `2021.01.01`
+
 
 ## Legal
 
