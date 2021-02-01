@@ -181,6 +181,7 @@ _- Thank you_
   - Update Arch ISO disk to `2021.01.01`
 - `20210201`:
   - Update Arch ISO disk to `2021.02.01`
+  - Change SSH bootstrap script to restart services instead of just starting them. New version of Arch ISO starts SSH server on boot.
 
 
 ## Legal
