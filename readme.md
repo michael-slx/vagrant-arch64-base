@@ -179,6 +179,8 @@ _- Thank you_
   - Disable 3D acceleration (Not needed for a CLI box)
 - `20210101`:
   - Update Arch ISO disk to `2021.01.01`
+- `20210201`:
+  - Update Arch ISO disk to `2021.02.01`
 
 
 ## Legal
