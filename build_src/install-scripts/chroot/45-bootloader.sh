@@ -13,7 +13,7 @@ bootctl --path=/boot install
 
 cp -R $UPLOAD_FILES/loader/** /boot/loader
 
-ROOT_FS_UUID="$(blkid -s UUID -o value /dev/sda2)"
-echo "Setting RootFS UUID: $ROOT_FS_UUID"
+ROOT_FS_UUID="ROOT"
+echo "Setting RootFS Label: $ROOT_FS_UUID"
 sed -i "s|FSUUID|$ROOT_FS_UUID|g" /boot/loader/entries/arch.conf
 sed -i "s|FSUUID|$ROOT_FS_UUID|g" /boot/loader/entries/arch-fallback.conf

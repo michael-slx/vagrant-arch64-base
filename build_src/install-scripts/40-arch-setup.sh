@@ -12,5 +12,5 @@ PACKAGES="$SYSTEM $GUEST_UTILS $UCODE $UTILS $SHELL"
 pacstrap /mnt $PACKAGES
 
 echo "Generating fstab"
-genfstab -U /mnt >> /mnt/etc/fstab
+genfstab -L /mnt >> /mnt/etc/fstab
 sed -i -E '/\/boot/ s/(rw,\S*)/\1,noauto,x-systemd.automount/' /mnt/etc/fstab
