@@ -182,6 +182,12 @@ _- Thank you_
 - `20210201`:
   - Update Arch ISO disk to `2021.02.01`
   - Change SSH bootstrap script to restart services instead of just starting them. New version of Arch ISO starts SSH server on boot.
+- `20210301`:
+  - Update Arch ISO disk to `2021.03.01`
+  - Switch to a more traditional neovim config: Specifically, line numbers and the line cursor are now disabled.
+  - Change SSH bootstrap script to completely avoid dhcpcd as new ISOs use systemd-resolved instead.
+  - Replace UUIDs with filesystem labels for bootloader config
+  - Make initramfs even smaller
 
 
 ## Legal
