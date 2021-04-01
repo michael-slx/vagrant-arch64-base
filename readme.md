@@ -188,6 +188,12 @@ _- Thank you_
   - Change SSH bootstrap script to completely avoid dhcpcd as new ISOs use systemd-resolved instead.
   - Replace UUIDs with filesystem labels for bootloader config
   - Make initramfs even smaller
+- `20210402`:
+  - **Build system**:
+    The build process now automatically looks for the newest Arch installer ISO. This is done using a wrapper shell script, therefore a working Bash interpreter is required as well as `curl`, `grep` and `head`.
+  - Completely drop fallback initramfs
+    Fallback initramfs isn't needed for a Vagrant-style "throwaway VM".
+  - Enable network options `UseDomains` and `UseNTP`.
 
 
 ## Legal
