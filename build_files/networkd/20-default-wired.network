@@ -4,3 +4,6 @@ Name=en*
 [Network]
 DHCP=ipv4
 
+[DHCPv4]
+UseDomains=yes
+UseNTP=yes
