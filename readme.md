@@ -40,7 +40,7 @@ This project uses [**Packer**](https://packer.io/) as the build system, so make 
 To build a working Vagrant box execute the following command in the top-level directory:
 
 ```shell
-$ packer build arch64-base.json
+$ bash ./build.sh
 ```
 
 The final file will be placed in the `dist/` directory.
