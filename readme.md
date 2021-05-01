@@ -56,7 +56,6 @@ The final file will be placed in the `dist/` directory.
 - `systemd-resolvconf` (compatibility layer for `systemd-resolved` DNS resolver)
 - `reflector` (sorts pacman's mirror list)
 - VirtualBox guest utilities (`virtualbox-guest-utils-nox`)
-- Processor microcode updates: `amd-ucode`, `intel-ucode`
 
 ## Partitioning
 
@@ -91,7 +90,8 @@ The following additional configuration is applied by default:
 - CPU exploit mitigations are disabled
 - Watchdogs are disabled
 - KMS and DRM disabled
-- reflector sorts pacman mirror list by download speed. Only HTTPS mirrors are used. reflector is executed automatically on mirror list update (pacman hook) and a weekly timer.
+- reflector sorts pacman mirror list by download speed. Only HTTPS mirrors are used. reflector is executed automatically on mirror list update (pacman hook), a weekly timer and on first boot.
+- Machine ID generated on first boot
 - Fancy output for pacman
 - less as default pager, neovim as editor (`EDITOR`, `VISUAL`)
 - User setup:
