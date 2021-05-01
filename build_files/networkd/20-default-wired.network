@@ -3,6 +3,8 @@ Name=en*
 
 [Network]
 DHCP=ipv4
+LinkLocalAddressing=ipv4
+IPv6AcceptRA=no
 
 [DHCPv4]
 UseDomains=yes
