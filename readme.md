@@ -194,6 +194,11 @@ _- Thank you_
   - Completely drop fallback initramfs
     Fallback initramfs isn't needed for a Vagrant-style "throwaway VM".
   - Enable network options `UseDomains` and `UseNTP`.
+- `20210501`:
+  - Drop processor ucode updates as they aren't needed for VMs
+  - Add script for deleting machine id after installation. Systemd will automatically generate one on first boot.
+  - Run Reflector on first boot
+  - Fully disable IPv6
 
 
 ## Legal
