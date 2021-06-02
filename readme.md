@@ -199,6 +199,9 @@ _- Thank you_
   - Add script for deleting machine id after installation. Systemd will automatically generate one on first boot.
   - Run Reflector on first boot
   - Fully disable IPv6
+- `20210602`:
+  - Remove mirrorlist upgrade pacman hook
+    It doesn't make sense to run Reflector on the old mirrorlist, then deleting the new one. Also it is quite a time hog when running updates.
 
 
 ## Legal
