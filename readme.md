@@ -90,7 +90,7 @@ The following additional configuration is applied by default:
 - CPU exploit mitigations are disabled
 - Watchdogs are disabled
 - KMS and DRM disabled
-- reflector sorts pacman mirror list by download speed. Only HTTPS mirrors are used. reflector is executed automatically on mirror list update (pacman hook), a weekly timer and on first boot.
+- reflector sorts pacman mirror list by download speed. Only HTTPS mirrors are used. reflector is executed automatically on a weekly timer and on first boot.
 - Machine ID generated on first boot
 - Fancy output for pacman
 - less as default pager, neovim as editor (`EDITOR`, `VISUAL`)
