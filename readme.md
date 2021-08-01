@@ -202,6 +202,8 @@ _- Thank you_
 - `20210602`:
   - Remove mirrorlist upgrade pacman hook
     It doesn't make sense to run Reflector on the old mirrorlist, then deleting the new one. Also it is quite a time hog when running updates.
+- `20210801`:
+  - Fix editing of pacman and locale config
 
 
 ## Legal
