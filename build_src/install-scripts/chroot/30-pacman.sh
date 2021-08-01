@@ -9,9 +9,8 @@ fi
 UPLOAD_FILES="$1"
 
 echo 'Configuring pacman'
-sed -i '/^#.*Color /s/^#//' /etc/pacman.conf
-sed -i '/^#.*TotalDownload /s/^#//' /etc/pacman.conf
-sed -i '/^#.*CheckSpace /s/^#//' /etc/pacman.conf
+sed -i '/^#.*Color/s/^#//' /etc/pacman.conf
+sed -i '/^#.*CheckSpace/s/^#//' /etc/pacman.conf
 
 mkdir -p /etc/pacman.d/hooks
 cp -f $UPLOAD_FILES/pacman-hooks/* /etc/pacman.d/hooks
