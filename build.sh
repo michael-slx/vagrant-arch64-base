@@ -11,4 +11,4 @@ echo "ISO Name: $ISO_NAME"
 packer build \
   -var "iso_mirror=${ISO_MIRROR}" \
   -var "iso_name=${ISO_NAME}" \
-  arch64-base.json
+  arch64-base.pkr.hcl
