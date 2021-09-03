@@ -1,11 +1,26 @@
 variable "iso_mirror" {
-  type    = string
-  default = ""
+  type = string
 }
 
 variable "iso_name" {
-  type    = string
-  default = ""
+  type = string
+}
+
+locals {
+  scripts_folder_name = "scripts"
+  files_folder_name   = "files"
+}
+
+locals {
+  root_folder =    "${path.root}"
+  scripts_folder = "${local.root_folder}/${local.scripts_folder_name}"
+  files_folder =   "${local.root_folder}/${local.files_folder_name}"
+}
+
+locals {
+  remote_dest_folder =  "/tmp"
+  scripts_dest_folder = "${local.remote_dest_folder}/${local.scripts_folder_name}"
+  files_dest_folder =   "${local.remote_dest_folder}/${local.files_folder_name}"
 }
 
 source "virtualbox-iso" "arch64-base" {
@@ -19,8 +34,8 @@ source "virtualbox-iso" "arch64-base" {
   boot_command             = [
     "curl http://{{ .HTTPIP }}:{{ .HTTPPort }}/bootstrap.sh | bash<enter>"
   ]
-  boot_keygroup_interval   = "1s"
-  boot_wait                = "2m"
+  boot_keygroup_interval   = "250ms"
+  boot_wait                = "75s"
 
   ssh_username             = "root"
   ssh_password             = ""
@@ -69,26 +84,17 @@ build {
   sources = ["source.virtualbox-iso.arch64-base"]
 
   provisioner "file" {
-    destination = "/tmp"
-    source      = "build_files"
-  }
-
-  provisioner "file" {
-    destination = "/tmp"
-    source      = "build_src/install-scripts"
+    sources     = [
+      "${local.scripts_folder}",
+      "${local.files_folder}"
+    ]
+    destination = "${local.remote_dest_folder}"
   }
 
   provisioner "shell" {
     inline = [
-      "chmod -R +x /tmp/install-scripts",
-      "/tmp/install-scripts/10-time.sh",
-      "/tmp/install-scripts/20-pacman.sh",
-      "/tmp/install-scripts/30-disk.sh",
-      "/tmp/install-scripts/40-arch-setup.sh",
-      "/tmp/install-scripts/50-chroot.sh /tmp/build_files",
-      "/tmp/install-scripts/80-resolv-conf.sh",
-      "/tmp/install-scripts/90-clean-machine-id.sh",
-      "/tmp/install-scripts/95-umount.sh"
+      "chmod -R +x ${local.scripts_dest_folder}",
+      "${local.scripts_dest_folder}/install.sh ${local.scripts_dest_folder} ${local.files_dest_folder}"
     ]
   }
 
