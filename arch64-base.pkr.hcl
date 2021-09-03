@@ -15,10 +15,9 @@ source "virtualbox-iso" "arch64-base" {
 
   format                   = "ovf"
 
-  http_directory           = "build_src"
-
+  http_directory           = "scripts"
   boot_command             = [
-    "curl http://{{ .HTTPIP }}:{{ .HTTPPort }}/00-bootstrap-ssh.sh | bash<enter>"
+    "curl http://{{ .HTTPIP }}:{{ .HTTPPort }}/bootstrap.sh | bash<enter>"
   ]
   boot_keygroup_interval   = "1s"
   boot_wait                = "2m"
