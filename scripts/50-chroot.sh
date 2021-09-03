@@ -2,19 +2,16 @@
 
 set -euo pipefail
 
-if [[ -z "$1" ]]; then
-  echo "Upload file path missing"
-  exit 1
-fi
-UPLOAD_FILES="$1"
+SCRIPT_DIR="$1"
+FILES_DIR="$2"
 
-CHROOT_UPLOAD_PATH="/root/upload_files"
+CHROOT_UPLOAD_PATH="/root/setup_files"
 
 echo "Copying setup files to new system"
 mkdir -p "/mnt$CHROOT_UPLOAD_PATH"
-cp -R $UPLOAD_FILES/* "/mnt$CHROOT_UPLOAD_PATH"
+cp -R $FILES_DIR/* "/mnt$CHROOT_UPLOAD_PATH"
 
-for filename in /tmp/install-scripts/chroot/*; do
+for filename in $SCRIPT_DIR/chroot/*; do
   echo "Processing chroot script $filename"
   CHROOT_PATH="$(basename $filename).sh"
   mv "$filename" "/mnt/$CHROOT_PATH"

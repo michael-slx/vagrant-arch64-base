@@ -7,5 +7,5 @@ SCRIPT_DIR="$1"
 FILES_DIR="$2"
 
 for filename in $SCRIPT_DIR/*-*.sh; do
-    "$filename" "$FILES_DIR"
+    "$filename" "$SCRIPT_DIR" "$FILES_DIR"
 done

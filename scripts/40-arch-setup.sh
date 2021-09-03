@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$1"
+FILES_DIR="$2"
+
 echo "Installing packages"
 SYSTEM="base linux e2fsprogs dosfstools systemd-resolvconf openssh reflector"
 GUEST_UTILS="virtualbox-guest-utils-nox"

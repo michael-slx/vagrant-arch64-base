@@ -2,8 +2,11 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$1"
+FILES_DIR="$2"
+
 echo "Partitioning disk"
-sfdisk /dev/sda < /tmp/build_files/disk/disk-parts.dump
+sfdisk /dev/sda < $FILES_DIR/disk/disk-parts.dump
 sync
 
 echo "Creating file systems"
