@@ -8,7 +8,7 @@ if [[ -z "$1" ]]; then
 fi
 UPLOAD_FILES="$1"
 
-echo 'Configuring pacman'
+echo '[CHROOT][Pacman] Configuring pacman'
 sed -i '/^#.*Color/s/^#//' /etc/pacman.conf
 sed -i '/^#.*CheckSpace/s/^#//' /etc/pacman.conf
 

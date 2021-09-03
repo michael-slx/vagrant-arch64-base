@@ -8,11 +8,11 @@ if [[ -z "$1" ]]; then
 fi
 UPLOAD_FILES="$1"
 
-echo 'Configuring hostname and hosts file'
+echo '[CHROOT][Network] Configuring hostname and hosts file'
 echo 'vagrant' > /etc/hostname
 echo '127.0.0.1   localhost' >> /etc/hosts
 echo '::1		      localhost' >> /etc/hosts
 
-echo 'Configuring network'
+echo '[CHROOT][Network] Configuring networkd'
 cp -f $UPLOAD_FILES/networkd/** /etc/systemd/network/
 systemctl enable systemd-networkd.service systemd-resolved.service

@@ -5,7 +5,7 @@ set -euo pipefail
 SCRIPT_DIR="$1"
 FILES_DIR="$2"
 
-echo "Installing packages"
+echo "[Install] Installing packages"
 SYSTEM="base linux e2fsprogs dosfstools systemd-resolvconf openssh reflector"
 GUEST_UTILS="virtualbox-guest-utils-nox"
 UTILS="neovim wget curl sudo man-db man-pages texinfo"
@@ -13,6 +13,6 @@ SHELL="zsh grml-zsh-config"
 PACKAGES="$SYSTEM $GUEST_UTILS $UTILS $SHELL"
 pacstrap /mnt $PACKAGES
 
-echo "Generating fstab"
+echo "[Install] Generating fstab"
 genfstab -L /mnt >> /mnt/etc/fstab
 sed -i -E '/\/boot/ s/(rw,\S*)/\1,noauto,x-systemd.automount/' /mnt/etc/fstab

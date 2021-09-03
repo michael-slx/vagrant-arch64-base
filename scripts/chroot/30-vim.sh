@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-echo "Configuring vim"
+echo "[CHROOT][vim] Configuring vim"
 cat <<EOF >> /etc/xdg/nvim/sysinit.vim
 
 """ Source: https://www.chrisatmachine.com/Neovim/02-vim-general-settings/

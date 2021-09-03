@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-echo 'Setting timezone to UTC'
+echo '[CHROOT][Time] Setting timezone to UTC'
 ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
 
-echo 'Syncing hardware clock'
+echo '[CHROOT][Time] Syncing hardware clock'
 hwclock --systohc

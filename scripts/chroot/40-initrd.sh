@@ -8,8 +8,8 @@ if [[ -z "$1" ]]; then
 fi
 UPLOAD_FILES="$1"
 
-echo 'Setting up InitRamFS'
+echo '[CHROOT][Initrd] Setting up InitRamFS'
 cp -fR $UPLOAD_FILES/initramfs/** /etc/
 chmod -R 644 /etc/mkinitcpio*
 chmod 755 /etc/mkinitcpio.d
-mkinitcpio -P
+mkinitcpio -P > /dev/null

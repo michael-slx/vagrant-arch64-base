@@ -8,7 +8,7 @@ if [[ -z "$1" ]]; then
 fi
 UPLOAD_FILES="$1"
 
-echo 'Setting up public SSH key'
+echo '[CHROOT][SSH] Setting up public SSH key'
 mkdir -p /home/vagrant/.ssh
 cat $UPLOAD_FILES/ssh/vagrant.pub >> /home/vagrant/.ssh/authorized_keys
 chmod 700 /home/vagrant/.ssh

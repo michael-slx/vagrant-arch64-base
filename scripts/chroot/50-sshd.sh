@@ -8,7 +8,7 @@ if [[ -z "$1" ]]; then
 fi
 UPLOAD_FILES="$1"
 
-echo 'Configuring SSH'
+echo '[CHROOT][SSH] Configuring SSH'
 cp -fR $UPLOAD_FILES/ssh/sshd_config /etc/ssh/sshd_config
 chmod 640 /etc/ssh/sshd_config
 systemctl enable sshd

@@ -8,6 +8,6 @@ if [[ -z "$1" ]]; then
 fi
 UPLOAD_FILES="$1"
 
-echo 'Configuring sudo'
+echo '[CHROOT][sudo] Configuring sudo'
 cp -fR $UPLOAD_FILES/sudo/sudoers /etc/sudoers
 chmod 440 /etc/sudoers

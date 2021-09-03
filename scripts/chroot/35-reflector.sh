@@ -8,7 +8,7 @@ if [[ -z "$1" ]]; then
 fi
 UPLOAD_FILES="$1"
 
-echo 'Setting up reflector'
+echo '[CHROOT][Reflector] Setting up reflector'
 cp $UPLOAD_FILES/reflector/reflector.conf /etc/xdg/reflector/reflector.conf
 cp $UPLOAD_FILES/reflector/reflector-firstboot.service /usr/lib/systemd/system/reflector-firstboot.service
 systemctl enable reflector.timer reflector-firstboot.service
