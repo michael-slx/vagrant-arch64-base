@@ -204,6 +204,9 @@ _- Thank you_
     It doesn't make sense to run Reflector on the old mirrorlist, then deleting the new one. Also it is quite a time hog when running updates.
 - `20210801`:
   - Fix editing of pacman and locale config
+- `20210903`:
+  - Switch Packer to HCL-based configuration
+  - Miscellaneous improvements for build system
 
 
 ## Legal
