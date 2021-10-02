@@ -113,6 +113,8 @@
 - Switch Packer to HCL-based configuration
 - Miscellaneous improvements for build system
 
-## `20211002`
+## Currently pending release
 
 - Reduce mirrorlist to 10 mirrors
+- Update sshd config
+- Update general VM options
