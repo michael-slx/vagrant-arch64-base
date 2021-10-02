@@ -53,14 +53,19 @@ source "virtualbox-iso" "arch64-base" {
 
   vboxmanage               = [
     # misc VM options
-    ["modifyvm", "{{ .Name }}", "--firmware", "efi64"],
+    ["modifyvm", "{{ .Name }}", "--firmware", "efi"],
+    ["modifyvm", "{{ .Name }}", "--apic", "on"],
     ["modifyvm", "{{ .Name }}", "--ioapic", "on"],
+    ["modifyvm", "{{ .Name }}", "--x2apic", "on"],
+    ["modifyvm", "{{ .Name }}", "--biosapic", "apic"],
     ["modifyvm", "{{ .Name }}", "--pae", "on"],
+    ["modifyvm", "{{ .Name }}", "--nestedpaging", "on"],
+    ["modifyvm", "{{ .Name }}", "--largepages", "on"],
     ["modifyvm", "{{ .Name }}", "--hwvirtex", "on"],
     ["modifyvm", "{{ .Name }}", "--nested-hw-virt", "on"],
-    ["modifyvm", "{{ .Name }}", "--hpet", "on"],
+    ["modifyvm", "{{ .Name }}", "--paravirtprovider", "default"],
     ["modifyvm", "{{ .Name }}", "--rtcuseutc", "on"],
-    ["modifyvm", "{{ .Name }}", "--graphicscontroller", "vmsvga"],
+    ["modifyvm", "{{ .Name }}", "--graphicscontroller", "none"],
     ["modifyvm", "{{ .Name }}", "--biosbootmenu", "disabled"],
 
     # boot order
