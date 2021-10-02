@@ -94,15 +94,12 @@ The following additional configuration is applied by default:
 - Fancy output for pacman
 - less as default pager, neovim as editor (`EDITOR`, `VISUAL`)
 - User setup:
-  - `vagrant ` user
+  - `vagrant` user
   - `vagrant` as a password for the root and vagrant users
   - zsh as default shell for both users
   - Password-less sudo for `vagrant `user
 - SSH
-  - IPv4 only
   - Root login using password allowed
-  - Reverse DNS disabled
-  - Keep-alive enabled
   - Vagrant insecure keypair authentication for `vagrant` user
 
 ## Security
