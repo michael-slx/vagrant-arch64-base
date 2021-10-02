@@ -207,6 +207,8 @@ _- Thank you_
 - `20210903`:
   - Switch Packer to HCL-based configuration
   - Miscellaneous improvements for build system
+- `20211002`:
+  - Reduce mirrorlist to 10 mirrors
 
 
 ## Legal
