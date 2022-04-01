@@ -23,6 +23,11 @@ locals {
   files_dest_folder =   "${local.remote_dest_folder}/${local.files_folder_name}"
 }
 
+locals {
+  iso_ssh_user = "root"
+  iso_ssh_password = "root"
+}
+
 source "virtualbox-iso" "arch64-base" {
   guest_os_type            = "ArchLinux_64"
   guest_additions_mode     = "disable"
@@ -32,13 +37,13 @@ source "virtualbox-iso" "arch64-base" {
 
   http_directory           = "scripts"
   boot_command             = [
-    "curl http://{{ .HTTPIP }}:{{ .HTTPPort }}/bootstrap.sh | bash<enter>"
+    "curl http://{{ .HTTPIP }}:{{ .HTTPPort }}/bootstrap.sh | bash -s -- ${local.iso_ssh_user} ${local.iso_ssh_password}<enter>"
   ]
   boot_keygroup_interval   = "250ms"
   boot_wait                = "75s"
 
-  ssh_username             = "root"
-  ssh_password             = ""
+  ssh_username             = "${local.iso_ssh_user}"
+  ssh_password             = "${local.iso_ssh_password}"
   ssh_wait_timeout         = "30s"
   shutdown_command         = "sudo shutdown -P now 'Vagrant is shutting down this VM'"
 
