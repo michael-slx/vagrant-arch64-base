@@ -13,7 +13,7 @@ Defaults      sudoedit_follow
 
 ## POLICY DEFINITIONS
 
-root ALL=(ALL) ALL
+root ALL=(ALL) NOPASSWD: ALL
 vagrant ALL=(ALL) NOPASSWD: ALL
 %wheel ALL=(ALL) ALL
 
