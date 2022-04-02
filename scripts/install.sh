@@ -13,7 +13,7 @@ PACKAGES=(
     e2fsprogs dosfstools systemd-resolvconf openssh reflector
     virtualbox-guest-utils-nox
     vim nano wget curl sudo git man-db man-pages texinfo
-    zsh grml-zsh-config
+    zsh
 )
 
 

@@ -1,0 +1,27 @@
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZSH=$HOME/.oh-my-zsh
+
+ZSH_THEME="cloud"
+
+CASE_SENSITIVE="false"
+HYPHEN_INSENSITIVE="true"
+
+zstyle ':omz:update' mode disabled
+
+COMPLETION_WAITING_DOTS="true"
+
+HIST_STAMPS="yyyy-mm-dd"
+
+plugins=(
+    archlinux
+    git
+    sudo
+    z
+    zsh-interactive-cd
+)
+
+source $ZSH/oh-my-zsh.sh
+
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'

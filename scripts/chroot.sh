@@ -18,13 +18,20 @@ cp $FILES_DIR/default-wired.network /etc/systemd/network/20-default-wired.networ
 systemctl enable systemd-networkd.service systemd-resolved.service
 
 ZSH_BINARY="$(chsh -l | grep zsh | head -1)"
+
 chsh -s "$ZSH_BINARY"
-cp -f /etc/skel/.zshrc /root/.zshrc
+touch /root/.zshrc
+
 useradd -G wheel -m -s "$ZSH_BINARY" vagrant
+
 cat <<eof | chpasswd
 root:vagrant
 vagrant:vagrant
 eof
+
+git clone https://github.com/ohmyzsh/ohmyzsh.git /home/vagrant/.oh-my-zsh
+chown -R vagrant:vagrant /home/vagrant/.oh-my-zsh
+cp $FILES_DIR/zshrc /home/vagrant/.zshrc
 
 sed -i '/^#.*CheckSpace/s/^#//' /etc/pacman.conf
 sed -i '/^#.*Color/s/^#//' /etc/pacman.conf
