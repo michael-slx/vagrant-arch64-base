@@ -1,0 +1,24 @@
+## sudoers file.
+
+## OPTIONS
+
+Defaults      env_reset
+Defaults      env_keep += "LANG LANGUAGE LINGUAS LC_* _XKB_CHARSET"
+Defaults      env_keep += "EDITOR VISUAL"
+Defaults      editor=/usr/bin/vim:/usr/bin/nvim:/usr/bin/vi:/usr/bin/nano
+Defaults      env_editor
+Defaults      sudoedit_follow
+
+
+
+## POLICY DEFINITIONS
+
+root ALL=(ALL) ALL
+vagrant ALL=(ALL) NOPASSWD: ALL
+%wheel ALL=(ALL) ALL
+
+
+
+## Import extra configuration
+# DO NOT remove leading '#'! This isn't a comment.
+#includedir /etc/sudoers.d
