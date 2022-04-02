@@ -8,6 +8,7 @@ export FILES_DIR="$2"
 
 PACKAGES=(
     base
+    base-devel
     linux
     e2fsprogs dosfstools systemd-resolvconf openssh reflector
     virtualbox-guest-utils-nox
