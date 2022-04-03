@@ -49,6 +49,7 @@ cp -R $FILES_DIR/* /mnt/setup/files
 arch-chroot /mnt env "FILES_DIR=/setup/files" \
                      "SCRIPT_DIR=/setup/scripts" \
                      /setup/scripts/chroot.sh
+arch-chroot /mnt su - vagrant /setup/scripts/aur-install.sh
 
 ln -sf "/run/systemd/resolve/stub-resolv.conf" /mnt/etc/resolv.conf
 
