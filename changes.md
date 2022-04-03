@@ -118,3 +118,12 @@
 - Reduce mirrorlist to 10 mirrors
 - Update sshd config
 - Update general VM options
+
+## `20220515`
+
+- Major refactor of build system
+- Switch from `neovim` to `vim`
+- Add `nano`
+- Use `oh-my-zsh` ZSH config
+- Add `base-devel` packages
+- Add `pikaur`, `pacaur` and `yay` AUR helpers
