@@ -81,9 +81,7 @@ The following additional configuration is applied by default:
 - Automatic (delayed) mounting of EFI system partition
 - Immediate RW mounting of root partition (`systemd-remount-fs.service` masked)
 - InitRamFs uses `systemd` and is optimized for fast booting
-- `systemd-boot` as bootloader
-  - Loader menu timeout disabled
-  - Automatic updating using pacman hook.
+- `systemd-boot` bootloader
 - Silent booting using kernel command line options
 - Hardware and processor entropy generation is trusted using kernel command line options
 - CPU exploit mitigations are disabled
@@ -92,11 +90,12 @@ The following additional configuration is applied by default:
 - reflector sorts pacman mirror list by download speed. Only HTTPS mirrors are used. reflector is executed automatically on a weekly timer and on first boot.
 - Machine ID generated on first boot
 - Fancy output for pacman
-- less as default pager, neovim as editor (`EDITOR`, `VISUAL`)
+- AUR helpers: `pikaur`, `pacaur`, `yay`
+- less as default pager, vim as editor (`EDITOR`, `VISUAL`)
 - User setup:
   - `vagrant` user
   - `vagrant` as a password for the root and vagrant users
-  - zsh as default shell for both users
+  - zsh as default shell for `vagrant `user, includes `oh-my-zsh`
   - Password-less sudo for `vagrant `user
 - SSH
   - Root login using password allowed
