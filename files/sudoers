@@ -15,7 +15,6 @@ Defaults      sudoedit_follow
 
 root ALL=(ALL) NOPASSWD: ALL
 vagrant ALL=(ALL) NOPASSWD: ALL
-%wheel ALL=(ALL) ALL
 
 
 

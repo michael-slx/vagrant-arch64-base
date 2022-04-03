@@ -22,7 +22,7 @@ ZSH_BINARY="$(chsh -l | grep zsh | head -1)"
 chsh -s "$ZSH_BINARY"
 touch /root/.zshrc
 
-useradd -G wheel -m -s "$ZSH_BINARY" vagrant
+useradd -m -s "$ZSH_BINARY" vagrant
 
 cat <<eof | chpasswd
 root:vagrant
@@ -62,7 +62,7 @@ chmod 600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant:vagrant /home/vagrant/.ssh
 systemctl enable sshd
 
-cp -fR $FILES_DIR/sudoers /etc/sudoers
+cp -f $FILES_DIR/sudoers /etc/sudoers
 chmod 440 /etc/sudoers
 
 UNUSED_PKGS=$(pacman -Qdtq || true)
