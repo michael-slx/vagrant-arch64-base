@@ -53,13 +53,6 @@ arch-chroot /mnt su - vagrant /setup/scripts/aur-install.sh
 
 ln -sf "/run/systemd/resolve/stub-resolv.conf" /mnt/etc/resolv.conf
 
-efibootmgr \
-    --disk /dev/sda --part 1 \
-    --create --label "Arch Linux" \
-    --loader /vmlinuz-linux \
-    --unicode 'root=LABEL=ROOT resume=LABEL=SWAP rootflags=rw,relatime initrd=\initramfs-linux.img add_efi_memmap random.trust_cpu=on rng_core.default_quality=1000 nomodeset nowatchdog mitigations=off quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3' \
-    --verbose
-
 rm -R /mnt/setup
 rm -f /mnt/etc/machine-id
 

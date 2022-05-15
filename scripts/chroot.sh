@@ -65,6 +65,13 @@ systemctl enable sshd
 cp -f $FILES_DIR/sudoers /etc/sudoers
 chmod 440 /etc/sudoers
 
+bootctl install
+rm -fRv /boot/loader/entries/*
+cp $FILES_DIR/arch.conf /boot/loader/entries/arch.conf
+cp $FILES_DIR/loader.conf /boot/loader/loader.conf
+[[ -d "/etc/pacman.d/hooks" ]] || mkdir -p "/etc/pacman.d/hooks"
+cp $FILES_DIR/100-systemd-boot.hook /etc/pacman.d/hooks/100-systemd-boot.hook
+
 UNUSED_PKGS=$(pacman -Qdtq || true)
 if [[ ! -z "$UNUSED_PKGS" ]]; then
   pacman -Rs --noconfirm $UNUSED_PKGS || true
