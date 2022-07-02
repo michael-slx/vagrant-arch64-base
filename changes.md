@@ -127,3 +127,9 @@
 - Use `oh-my-zsh` ZSH config
 - Add `base-devel` packages
 - Add `pikaur`, `pacaur` and `yay` AUR helpers
+
+## `20220702`
+
+- **Fix line endings**
+
+  Config files should use LF-only line endings.
