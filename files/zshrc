@@ -8,7 +8,7 @@ HYPHEN_INSENSITIVE="true"
 
 zstyle ':omz:update' mode disabled
 
-COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="false"
 
 HIST_STAMPS="yyyy-mm-dd"
 
