@@ -133,3 +133,8 @@
 - **Fix line endings**
 
   Config files should use LF-only line endings.
+
+## `20220824`
+
+- Turn off ZSH completion progress dots
+- Enable generation of `en_US.UTF-8` locale
