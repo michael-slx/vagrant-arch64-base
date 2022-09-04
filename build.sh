@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-ISO_MIRROR="https://mirror.pkgbuild.com"
+ISO_MIRROR="https://geo.mirror.pkgbuild.com"
 ISO_NAME="$(curl -fs "${ISO_MIRROR}/iso/latest/" | grep -Eo 'archlinux-[0-9]{4}\.[0-9]{2}\.[0-9]{2}-x86_64.iso' | head -n 1)"
 
 echo "Mirror: $ISO_MIRROR"
