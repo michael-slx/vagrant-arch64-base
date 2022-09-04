@@ -138,3 +138,7 @@
 
 - Turn off ZSH completion progress dots
 - Enable generation of `en_US.UTF-8` locale
+
+## `20220904`
+
+- Switch ISO mirror to https://geo.mirror.pkgbuild.com
