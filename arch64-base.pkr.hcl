@@ -6,6 +6,10 @@ variable "iso_name" {
   type = string
 }
 
+variable "output_file" {
+  type = string
+}
+
 locals {
   scripts_folder_name = "scripts"
   files_folder_name   = "files"
@@ -103,6 +107,6 @@ build {
 
   post-processor "vagrant" {
     keep_input_artifact = false
-    output              = "dist\\${source.name}_${formatdate("YYYY-MM-DD", timestamp())}.box"
+    output              = "dist\\${var.output_file}.box"
   }
 }
