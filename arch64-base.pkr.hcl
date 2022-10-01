@@ -61,7 +61,7 @@ source "virtualbox-iso" "arch64-base" {
   hard_drive_discard       = true
 
   iso_url       = "${var.iso_mirror}/iso/latest/${var.iso_name}"
-  iso_checksum  = "file:${var.iso_mirror}/iso/latest/sha1sums.txt"
+  iso_checksum  = "file:${var.iso_mirror}/iso/latest/sha256sums.txt"
   iso_interface = "sata"
 
   guest_additions_mode = "disable"
