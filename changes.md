@@ -142,3 +142,8 @@
 ## `20220904`
 
 - Switch ISO mirror to https://geo.mirror.pkgbuild.com
+
+## `20221001`
+
+- Add checksum calculation to build
+- Switch to sha256sums for ISO download
