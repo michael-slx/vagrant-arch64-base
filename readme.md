@@ -1,4 +1,6 @@
-# Arch Linux base box
+# New repository: [`michael-slx/vagrant-arch64-template`](https://github.com/michael-slx/vagrant-arch64-template)
+
+# ~Arch Linux base box~
 
 > A minimalistic Arch Linux-based Vagrant box
 
